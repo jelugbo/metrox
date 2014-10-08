@@ -8,47 +8,28 @@
 
 ## Toss the Stanford brand bar on top of the page
 <%block name="navigation_top">
-<div role="menubar" class="metrox-header">
-<div class="container">
-<div class="row">
-<div class="metrox-header-primary">
-<a href="/" class="internal-home metrox-logo"></a>
-</div>
-<div class="metrox-header-secondary">
-<a href="/courses" class="metrox-header-link internal-home">Courses</a>
-<a data-js="redirect-link" href="http://hebsonline.com/login" class="metrox-header-link metrox-header-link-special">Sign In</a>
-<a data-js="redirect-link" href="http://hebsonline.com/register" class="metrox-header-link metrox-header-link-special">Sign Up</a>
-</div>
-</div>
-</div>
-</div>
- 
+  <div id="su-header">
+    <div class="su-container">
+      <a href="http://www.stanford.edu">
+        <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23">
+      </a>
+    </div>
+  </div>
 </%block>
 
 ## TODO: this will eventually be moved to the Sass
-
+<%block name="navigation_logo">
+  <img src="${static.url('themes/stanford/images/stanford-S-logo.png')}" height="35" alt="${_('{platform_name}, Courses List').format(platform_name='Stanford Online')}" />
+</%block>
 
 ## We don't want extra links inside the navigation dropdown
 <%block name="navigation_dropdown_menu_links" />
 
-</%block>
-
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
-<div role="menubar" class="metrox-header">
-<div class="container">
-<div class="row">
-<div class="metrox-header-primary">
-<a href="/" class="internal-home metrox-logo"></a>
-</div>
-<div class="metrox-header-secondary">
-<a href="${marketing_link('COURSES')}" class="metrox-header-link internal-home">Courses</a>
-<a data-js="redirect-link" href="${marketing_link('LOGIN')}" class="metrox-header-link metrox-header-link-special">Sign In</a>
-<a data-js="redirect-link" href="${marketing_link('REGISTER')}" class="metrox-header-link metrox-header-link-special">Sign Up</a>
-</div>
-</div>
-</div>
-</div>
+  <li class="nav-global-01">
+    <a href="${marketing_link('ABOUT')}">About</a>
+  </li>
 </%block>
 
 ## When authenticated, show both the about page and find courses

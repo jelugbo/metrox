@@ -22,25 +22,31 @@
 </div>
 </div>
 </div>
-  <div id="su-header">
-    <div class="su-container">
-      <a href="http://www.hebsonline.edu">
-        <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="HEBS" width="152" height="23">
-      </a>
-    </div>
-  </div>
+ 
 </%block>
 
 ## TODO: this will eventually be moved to the Sass
-<%block name="navigation_logo">
-  <img src="${static.url('themes/metrox/images/stanford-S-logo.png')}" height="35" alt="${_('{platform_name}, Courses List').format(platform_name='HEBS Online')}" />
-</%block>
+
 
 ## We don't want extra links inside the navigation dropdown
 <%block name="navigation_dropdown_menu_links" />
 
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
+<div role="menubar" class="metrox-header">
+<div class="container">
+<div class="row">
+<div class="metrox-header-primary">
+<a href="/" class="internal-home metrox-logo"></a>
+</div>
+<div class="metrox-header-secondary">
+<a href="${marketing_link('COURSES')}" class="metrox-header-link internal-home">Courses</a>
+<a data-js="redirect-link" href="${marketing_link('LOGIN')}" class="metrox-header-link metrox-header-link-special">Sign In</a>
+<a data-js="redirect-link" href="${marketing_link('REGISTER')}" class="metrox-header-link metrox-header-link-special">Sign Up</a>
+</div>
+</div>
+</div>
+</div>
   <li class="nav-global-01">
     <a href="${marketing_link('ABOUT')}">About</a>
   </li>

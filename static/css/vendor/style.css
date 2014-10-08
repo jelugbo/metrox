@@ -5778,7 +5778,7 @@ select,input[type="text"],input[type="password"],input[type="datetime"],input[ty
 
 		.metrox-header .metrox-header-primary .metrox-logo {
 			text-decoration: none;
-			background: url("../themes/metrox/static/images/logo_top.png");
+			background: url("../themes/metrox/images/logo_top.png");
 			background-repeat: no-repeat;
 			width: 108px;
 			height: 17px;

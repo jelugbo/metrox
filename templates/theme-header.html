@@ -8,15 +8,6 @@
 
 ## Toss the Stanford brand bar on top of the page
 <%block name="navigation_top">
-
- 
-</%block>
-
-## TODO: this will eventually be moved to the Sass
-
-
-## We don't want extra links inside the navigation dropdown
-<%block name="navigation_dropdown_menu_links" />
 <div role="menubar" class="metrox-header">
 <div class="container">
 <div class="row">
@@ -31,6 +22,15 @@
 </div>
 </div>
 </div>
+ 
+</%block>
+
+## TODO: this will eventually be moved to the Sass
+
+
+## We don't want extra links inside the navigation dropdown
+<%block name="navigation_dropdown_menu_links" />
+
 </%block>
 
 ## When unauthenticated, only show the about page link

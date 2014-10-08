@@ -6,8 +6,11 @@
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
 
-## Toss the Stanford brand bar on top of the page
-<%block name="navigation_top">
+## TODO: this will eventually be moved to the Sass
+
+
+## We don't want extra links inside the navigation dropdown
+<%block name="navigation_dropdown_menu_links" />
 <div role="menubar" class="metrox-header">
 <div class="container">
 <div class="row">
@@ -22,14 +25,7 @@
 </div>
 </div>
 </div>
- 
 </%block>
-
-## TODO: this will eventually be moved to the Sass
-
-
-## We don't want extra links inside the navigation dropdown
-<%block name="navigation_dropdown_menu_links" />
 
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">

@@ -8949,7 +8949,7 @@ a.teallink,a.teallink:hover {color: #00929f;text-decoration:none}
 
 	/* The apparent input */
 .tknz-wrapper  .tknz-suggest-li:hover {color: #fff;background-color:#0367b0}
-header.outer-wrapper header.global-new{display: none}
+#header .outer-wrapper .global-new{display: none;}
 
 @font-face {
 	font-family: 'VideoJS';
